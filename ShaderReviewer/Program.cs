@@ -13,12 +13,18 @@ namespace ShaderReviewer
             Application.SetCompatibleTextRenderingDefault(false);
 
             string shaderDir = "";
+            bool resetReviews = false;
 
-            if (args.Length > 0)
+            // Parse arguments
+            foreach (var arg in args)
             {
-                shaderDir = args[0];
+                if (arg == "--reset" || arg == "-r")
+                    resetReviews = true;
+                else if (!arg.StartsWith("-"))
+                    shaderDir = arg;
             }
-            else
+
+            if (string.IsNullOrEmpty(shaderDir))
             {
                 // Try several common locations
                 var candidates = new[]
@@ -46,6 +52,19 @@ namespace ShaderReviewer
                 MessageBox.Show($"Shader directory not found!\n\nTried multiple locations.\nRun with path argument:\nShaderReviewer.exe \"path\\to\\diatribes_ShadersV2\"",
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
+            }
+
+            // Handle reset flag
+            if (resetReviews)
+            {
+                var workingFile = Path.Combine(Path.GetDirectoryName(shaderDir)!, "reviewed_working.txt");
+                var brokenFile = Path.Combine(Path.GetDirectoryName(shaderDir)!, "reviewed_broken.txt");
+
+                if (File.Exists(workingFile)) File.Delete(workingFile);
+                if (File.Exists(brokenFile)) File.Delete(brokenFile);
+
+                MessageBox.Show("Review files cleared! Starting fresh.", "Reset Complete",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
             Application.Run(new ReviewerForm(shaderDir));
