@@ -96,7 +96,30 @@ ScreenShader/
 └── WINDOWS11_WALLPAPER_FIX.md
 ```
 
-## Building
+## Installation
+
+### Quick Install (Recommended)
+
+Run the installer to build, install, and set up auto-start:
+
+```powershell
+install.bat
+```
+
+This will:
+1. Build the Release version
+2. Install to `%LOCALAPPDATA%\ScreenShader`
+3. Create a startup shortcut (runs automatically on Windows login)
+4. Set NVIDIA threading optimization
+5. Launch ScreenShader
+
+### Uninstall
+
+```powershell
+uninstall.bat
+```
+
+### Manual Build
 
 ```powershell
 # Debug build
