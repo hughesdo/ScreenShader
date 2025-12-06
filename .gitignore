@@ -1,0 +1,21 @@
+# Build outputs
+bin/
+obj/
+
+# IDE
+.vs/
+.vscode/
+*.user
+*.suo
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Logs
+*.log
+
+# ShaderReviewer build outputs
+ShaderReviewer/bin/
+ShaderReviewer/obj/
+
