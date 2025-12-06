@@ -19,3 +19,7 @@ Thumbs.db
 ShaderReviewer/bin/
 ShaderReviewer/obj/
 
+# Archives in Comments folder (only include .md files)
+Comments todo/*.rar
+Comments todo/*.zip
+

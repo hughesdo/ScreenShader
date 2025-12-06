@@ -13,7 +13,7 @@ A Windows desktop wallpaper application that renders animated GLSL shaders behin
 
 The shaders are licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License](https://creativecommons.org/licenses/by-nc-sa/3.0/) (CC BY-NC-SA 3.0).
 
-See [SHADER_LICENSE.md](SHADER_LICENSE.md) for full license details.
+See [SHADER_LICENSE.md](Comments%20todo/SHADER_LICENSE.md) for full license details.
 
 ## Features
 
@@ -154,7 +154,7 @@ The shaders in `diatribes_ShadersV2/` are created by [Diatribes](https://www.sha
 
 Per [Shadertoy's Terms of Service](https://www.shadertoy.com/terms), shaders without an explicit license default to CC BY-NC-SA 3.0.
 
-**See [SHADER_LICENSE.md](SHADER_LICENSE.md) for full details.**
+**See [SHADER_LICENSE.md](Comments%20todo/SHADER_LICENSE.md) for full details.**
 
 ### Application Code (MIT)
 
